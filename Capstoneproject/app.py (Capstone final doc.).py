@@ -1,22 +1,4 @@
-"""
-app.py
-------
-Real-Time Predictive Air Quality Dashboard (Capstone Project)
 
-Architecture:
-  Ingestion & Storage : ingestion.py (Open-Meteo Air Quality API -> DuckDB)
-  Frontend & Analytics: this file (Streamlit + DuckDB SQL + Plotly + linear
-                         forecast with shaded confidence intervals)
-
-Run locally:
-    streamlit run app.py
-
-The app starts its own background ingestion thread on first load (see
-`start_background_ingestion`), so a single `streamlit run` (or a single
-Streamlit Community Cloud deployment) satisfies both the "Automated Data
-Ingestion" and "Live Public Deployment" capstone requirements without
-needing a second always-on process.
-"""
 #pip install duckdb
 import threading
 from datetime import timedelta
